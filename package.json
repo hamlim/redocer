@@ -1,6 +1,6 @@
 {
   "name": "redocer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "source": "src/index.js",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -12,6 +12,9 @@
     "test-watch": "jest --watch",
     "build": "microbundle build"
   },
+  "files": [
+    "dist/"
+  ],
   "devDependencies": {
     "@babel/cli": "7.5.0",
     "@babel/core": "7.5.4",
