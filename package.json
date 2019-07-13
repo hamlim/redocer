@@ -1,7 +1,6 @@
 {
-  "name": "@matthamlin/project-library-template",
+  "name": "redocer",
   "version": "0.0.0",
-  "private": true,
   "source": "src/index.js",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
