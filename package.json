@@ -10,7 +10,7 @@
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watch",
-    "build": "microbundle --jsx React.createElement --external react"
+    "build": "microbundle build"
   },
   "devDependencies": {
     "@babel/cli": "7.5.0",
@@ -21,6 +21,7 @@
     "@testing-library/react": "8.0.5",
     "jest": "24.8.0",
     "microbundle": "0.11.0",
+    "prettier": "1.18.2",
     "react": "16.8.6",
     "react-dom": "16.8.6"
   }

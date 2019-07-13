@@ -2,17 +2,23 @@
 
 _Pronounced: reducer_
 
-A custom React hook that wraps `useReducer` to provide undo-redo support.
+A custom reducer enhancer that returns a reducer that handles undo and redo
+actions.
 
 ### API
 
 ```jsx
-import useRedocer from 'redocer'
-import { useReducer } from 'react'
+import makeRedocer from 'redocer'
 
-function App() {
-  let [state, dispatch] = useRedocer(
-    useReducer((state, action) => state + 1, 0),
-  )
-}
+function reducer(state, action) { ... };
+
+let redoable = makeRedocer(reducer, initialState);
+
+// Regular actions pass through to the original reducer
+redoable(state, 'some-action')
+// if you have already called the reducer with a custom action
+// then you can call it with a `redo` action, returning the previous state
+redoable(state, 'redo')
+// Once you have redone a change, you can call the reducer with `undo`
+redoable(state, 'undo')
 ```
