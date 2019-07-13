@@ -1,0 +1,28 @@
+{
+  "name": "@matthamlin/project-library-template",
+  "version": "0.0.0",
+  "private": true,
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "unpkg": "dist/index.umd.js",
+  "author": "Matthew Hamlin <hamlim@outlook.com> (https://matthamlin.me/)",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "build": "microbundle --jsx React.createElement --external react"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.5.0",
+    "@babel/core": "7.5.4",
+    "@babel/preset-env": "7.5.4",
+    "@babel/preset-react": "7.0.0",
+    "@testing-library/jest-dom": "4.0.0",
+    "@testing-library/react": "8.0.5",
+    "jest": "24.8.0",
+    "microbundle": "0.11.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  }
+}
